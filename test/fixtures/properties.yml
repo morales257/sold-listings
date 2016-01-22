@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  street: MyString
+  city: MyString
+  province: MyString
+  postal: MyString
+  list_price: 1
+  sold_price: 1
+  sold_date: 2016-01-16 16:56:03
+  square_feet: 1
+  storeys: 1
+  rooms: MyString
+  bedrooms: MyString
+  bathrooms: MyString
+  description: MyText
+  longitude: 1.5
+  latitude: 1.5
+
+two:
+  street: MyString
+  city: MyString
+  province: MyString
+  postal: MyString
+  list_price: 1
+  sold_price: 1
+  sold_date: 2016-01-16 16:56:03
+  square_feet: 1
+  storeys: 1
+  rooms: MyString
+  bedrooms: MyString
+  bathrooms: MyString
+  description: MyText
+  longitude: 1.5
+  latitude: 1.5

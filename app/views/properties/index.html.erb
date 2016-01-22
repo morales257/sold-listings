@@ -1,0 +1,11 @@
+<h1>Recent Sales Near <%= params[:search] %></h1>
+
+<div class="map-container">
+</div>
+
+<ul>
+  <% @comps.each do |comparable|%>
+  <li><%= comparable.street %></li>
+  <i> <%= comparable.sold_price%></i>
+  <% end %>
+</ul>

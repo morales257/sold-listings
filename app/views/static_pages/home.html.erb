@@ -1,2 +1,20 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<div class="home-intro">
+<div class="row">
+
+<div class="info-container">
+
+<h2>Empower your next move by searching what home values are in your neighborhood of interest.</h2>
+
+<%= @error %>
+
+<%= form_tag(properties_path, :method => "get", id: "search-form", class: "form-inline") do %>
+<%= text_field_tag :search, params[:search], class: "form-control", placeholder: "Enter an address or postal code" %>
+<%= submit_tag "Search", class: "btn btn-default" %>
+<% end %>
+</div>
+</div>
+</div>
+
+
+
+
