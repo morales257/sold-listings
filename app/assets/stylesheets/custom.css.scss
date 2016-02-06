@@ -1,13 +1,27 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.container {
+   margin: 0;
+}
+
 #search {
     width: 500px;
     align: center;
-}
-
-h1 {
-    color: #fff;
 }
 
 .row {
@@ -27,16 +41,14 @@ h1 {
         position: absolute;
 }
 
-h2 {
-    color: #fff;
-}
 
 .info-container {
     background-color: rgba(0,0,0,0.5);
     padding: 30px;
     border-radius: 5px;
- 
-    
+     h2 {
+    color: #fff;
+}
 }
 
 .navbar {
@@ -57,6 +69,80 @@ h2 {
 
 .nav {
     font-weight: bold;
-    color: #fff;
+   
 }
 
+.properties-results {
+    position: relative;
+    margin-top: 50px;
+   
+  
+}
+
+#pr-row {
+    padding: 0;
+    margin-top: 0;
+}
+
+aside{
+    width: 400px;
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    bottom: 0;
+    min-width: 195px;
+    background-color: #f1f1f1;
+        ul {
+            list-style-type: none;
+            text-align: left;
+           
+        }
+}
+
+  #map {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        min-width: 260px;
+        
+    }
+
+#individual-properties {
+    margin-top: 20px;
+}
+
+#ip-row {
+    margin: 0;
+    padding: 100px;
+}
+
+.list-group {
+    border-top: 1px solid #006699;
+    
+}
+
+.list-group-text {
+    text-align: left;
+}
+
+.property-list-display {
+    display: table;
+}
+
+.property-list-row {
+    display: inline;
+ 
+}
+
+#price-li {
+    float: right;
+    margin-right: 20px;
+    font-size: 16px;
+}
+
+#street-li {
+    font-size: 16px;
+}

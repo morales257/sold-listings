@@ -24,6 +24,6 @@ csv = CSV.parse(csv_text, :headers => true)
 csv.each do |row|
    Property.create!( :street => row['Street Address'], :city => row['City'], :province => row['Province'],
     :postal => row['Postal Code'], :list_price => row['List Price'], :sold_price => row['Sold Price'], :sold_date => row['Sold Date'],
-    :dom => row['DOM'], :square_feet => row['Square Feet'], :storeys => row['Storeys'], :rooms => row['Rooms'], 
+    :dom => row['DOM'], :square_feet => row['Square feet'], :storeys => row['Storeys'], :rooms => row['Rooms'], 
     :bedrooms => row['Bedrooms'], :bathrooms => row['Washrooms'], :description => row['Description'])
    end

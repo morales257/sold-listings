@@ -1,11 +1,44 @@
+<div class="properties-results">
+<div class="container">
+  <div class="row" id="pr-row">
+   
+  <div id='map'></div>
+<aside>
 <h1>Recent Sales Near <%= params[:search] %></h1>
-
-<div class="map-container">
-</div>
-
 <ul>
   <% @comps.each do |comparable|%>
-  <li><%= comparable.street %></li>
-  <i> <%= comparable.sold_price%></i>
+  <% list = comparable.list_price.gsub(/\D/,'').to_i %>
+  <% sold = comparable.sold_price.gsub(/\D/,'').to_i %>
+  <% price_ratio = (sold.to_f / list) * 100 %>
+  <li class="property-list-row" id="street-li"><%= comparable.street %></li>
+  <li class="property-list-row" id="price-li">Sold for <%= comparable.sold_price%>, 
+  (<%= number_to_percentage(price_ratio, precision: 0) %>)</li>
+  <li class="property-list-display"><%= comparable.city %>, <%= comparable.postal %></li>
+  <li class="property-list-display"><%= comparable.bedrooms%> beds | <%= comparable.bathrooms %> ba |
+  <%= comparable.square_feet %> sqft</li>
+  <li class="property-list-display"> Listed for <%= comparable.list_price%></li>
   <% end %>
 </ul>
+</aside>
+
+</div>
+</div>
+</div>
+
+<div id="individual-properties">
+  <div class="container">
+    <div class="row" id="ip-row">
+      <% @comps.each do |comparables| %>
+      <div class="col-sm-4 col-xs-12">
+        <div class="list-group">
+          <h3 class="list-group-text"><%= comparables.street %></h3>
+          <p class="list-group-text"><%= comparables.square_feet %> square feet</p>
+          <p class="list-group-text">List Price: <%= comparables.list_price %></p>
+          <p class="list-group-text">Sold Price: <%= comparables.sold_price %></p>
+          
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -2,25 +2,18 @@
 <html>
 <head>
   <title>Workspace</title>
+  
+<script src='https://api.tiles.mapbox.com/mapbox.js/v2.2.4/mapbox.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox.js/v2.2.4/mapbox.css' rel='stylesheet' />
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <header class="navbar navbar-fixed-top navbar-inverse">
-    <div class="container">
-      <%= link_to "What Should I Pay", '#', id: "logo" %>
-      <nav>
-        <ul class="nav navbar-nav navbar-right">
-        <li> <%= link_to "About", '#'%></li>
-        <li> <%= link_to "Log In", '#' %></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-<div class="container">
+ <%= render 'layouts/header' %>
 <%= yield %>
-<% yield :scripts %>
-</div>
+<%= render 'layouts/footer' %>
+<%= debug(params) if Rails.env.development? %>
+
 </body>
 </html>

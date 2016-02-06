@@ -39,5 +39,5 @@ Rails.application.configure do
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
   
-  config.web_console.whitelisted_ips = '99.238.106.222'
+  config.web_console.whitelisted_ips = '99.238.106.222','38.104.251.50'
 end
